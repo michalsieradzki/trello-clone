@@ -1,0 +1,11 @@
+
+<div class="columns is-centered">
+  <div class="column is-half">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <h1 class="title is-4">Log in</h1>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input mb-3", required: true, placeholder: "E-mail" %>
+          <%= f.password_field :password, autocomplete: "current-password", class: "input mb-3", required: true, placeholder: "Password" %>
+          <%= f.submit "Log in", class: "button is-primary is-fullwidth" %>
+    </div>
+  <% end %>
+</div>

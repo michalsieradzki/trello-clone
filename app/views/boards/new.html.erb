@@ -1,0 +1,13 @@
+<%= form_with model: @board, local: true %>
+
+<div class="columns is-centered">
+  <div class="column is-half">
+  <%= form_with model: @board, local: true do |f|  %>
+        <h1 class="title is-4">New board</h1>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "input mb-3", required: true, placeholder: "Board name" %>
+          <%= f.hidden_field :user %>
+          <%= link_to "Cancel",:back, class: "button is-primary is-light" %>
+          <%= f.submit "Create board", class: "button is-primary" %>
+    </div>
+  <% end %>
+</div>
